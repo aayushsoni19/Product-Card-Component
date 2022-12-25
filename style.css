@@ -31,6 +31,10 @@
     border-bottom-left-radius: 10px;
 }
 
+.img2 {
+    display: none;
+}
+
 .content {
     background-color: white;
     border-top-right-radius: 10px;
@@ -47,8 +51,14 @@
     background-color: white;
 }
 
-.content > h1 {
+.container {
+    background-color: white;
+    border-top-right-radius: 10px;
+}
+
+.content > .container > h1 {
     padding: 0 30px;
+    width: 170px;
     position: relative;
     top: 55px;
     font-family: 'Fraunces', serif;
@@ -57,7 +67,7 @@
     background-color: white;
 }
 
-.content > p {
+.content > .container > p {
     padding: 0 30px;
     position: relative;
     top: 75px;
@@ -115,4 +125,69 @@
 .btn:hover {
     background-color: hsl(212, 21%, 14%);
     cursor: pointer;
+}
+
+@media only screen and (max-width: 400px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 350px;
+        border-radius: 10px;
+        background-color: hsl(0, 0%, 100%);
+    }
+    .img2 {
+        display: block;
+        width: 350px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .img {
+        display: none;
+    }
+
+    .content {
+        background-color: white;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .container {
+        display: flex;
+        align-items: flex-start;
+        row-gap: 2rem;
+        flex-wrap: wrap;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .content > .container > h1 {
+        width: 245px;
+        position: relative;
+        top: 15px;
+    }
+
+    .content > .container > p {
+        position: relative;
+        top: 0px;
+    }
+
+    .price {
+        position: relative;
+        top: -5px;
+    }
+
+    .cut-price {
+        position: relative;
+        top: 5px;
+        left: 0px;
+    }
+
+    .btn {
+        position: relative;
+        top: -25px;
+        padding: 10px 100px;
+    }
 }
